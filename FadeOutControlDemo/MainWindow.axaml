@@ -14,24 +14,15 @@
       <StackPanel Width="75"
                   Background="LightGray"
                   DockPanel.Dock="Top">
-        <c:FadeOutTextControl Text="Wallet With Long Name"
-                              HorizontalAlignment="Center"
-                              FontSize="10" />
-        <c:FadeOutTextControl Text="Wallet 1"
-                              HorizontalAlignment="Center"
-                              FontSize="10" />
-        <c:FadeOutTextControl Text="Wallet 2"
-                              HorizontalAlignment="Center"
-                              FontSize="10" />
-        <c:FadeOutTextControl Text="Wallet 3"
-                              HorizontalAlignment="Center"
-                              FontSize="10" />
+        <c:FadeOutTextControl Text="Wallet With Long Name" />
+        <c:FadeOutTextControl Text="Wallet 1" />
+        <c:FadeOutTextControl Text="Wallet 2" />
+        <c:FadeOutTextControl Text="Wallet 3" />
       </StackPanel>
 
       <!-- Bottom items -->
       <StackPanel Width="75"
                   Background="LightGray"
-                  TextElement.FontSize="10"
                   DockPanel.Dock="Bottom">
         <c:FadeOutTextControl Text="Settings" />
         <c:FadeOutTextControl Text="Add Wallet" />
