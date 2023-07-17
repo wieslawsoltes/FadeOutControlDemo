@@ -1,0 +1,44 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c="clr-namespace:FadeOutControlDemo.Controls"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FadeOutControlDemo.MainWindow"
+        Title="FadeOutControlDemo">
+  <DockPanel>
+
+
+    <DockPanel DockPanel.Dock="Left"
+               LastChildFill="False">
+      <StackPanel Width="75"
+                  Background="LightGray"
+                  DockPanel.Dock="Top">
+        <c:FadeOutTextControl Text="Wallet With Long Name"
+                              HorizontalAlignment="Center"
+                              FontSize="10" />
+        <c:FadeOutTextControl Text="Wallet 1"
+                              HorizontalAlignment="Center"
+                              FontSize="10" />
+        <c:FadeOutTextControl Text="Wallet 2"
+                              HorizontalAlignment="Center"
+                              FontSize="10" />
+        <c:FadeOutTextControl Text="Wallet 3"
+                              HorizontalAlignment="Center"
+                              FontSize="10" />
+      </StackPanel>
+      <StackPanel Width="75"
+                  Background="LightGray"
+                  TextElement.FontSize="10"
+                  DockPanel.Dock="Bottom">
+        <c:FadeOutTextControl Text="Settings" />
+        <c:FadeOutTextControl Text="Add Wallet" />
+        <c:FadeOutTextControl Text="Discreet Mode" />
+      </StackPanel>
+    </DockPanel>
+
+    <Panel>
+    </Panel>
+
+  </DockPanel>
+</Window>

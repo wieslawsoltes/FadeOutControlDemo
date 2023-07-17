@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="FadeOutControlDemo/App.axaml" value="FadeOutControlDemo/FadeOutControlDemo.csproj" />
+        <entry key="FadeOutControlDemo/Controls/FadeOutTextControl.axaml" value="FadeOutControlDemo/FadeOutControlDemo.csproj" />
+        <entry key="FadeOutControlDemo/FadeOutControl.axaml" value="FadeOutControlDemo/FadeOutControlDemo.csproj" />
+        <entry key="FadeOutControlDemo/MainWindow.axaml" value="FadeOutControlDemo/FadeOutControlDemo.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

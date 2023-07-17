@@ -1,0 +1,27 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:FadeOutControlDemo.Controls">
+
+  <Design.PreviewWith>
+    <c:FadeOutTextControl Text="" />
+  </Design.PreviewWith>
+
+  <Style Selector="c|FadeOutTextControl">
+
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Panel>
+          <TextBlock Name="PART_TrimmedTextBlock"
+                     Text="{TemplateBinding Text}"
+                     TextTrimming="CharacterEllipsis"
+                     Opacity="0" />
+          <c:FadeOutTextBlock Name="PART_NoTrimTextBlock"
+                             Text="{TemplateBinding Text}"
+                             TextTrimming="None" />
+        </Panel>
+      </ControlTemplate>
+    </Setter>
+
+  </Style>
+
+</Styles>
