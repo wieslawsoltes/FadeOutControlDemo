@@ -10,7 +10,7 @@ namespace FadeOutControlDemo.Controls;
 public class FadeOutTextControl : TemplatedControl
 {
 	public static readonly StyledProperty<string?> TextProperty =
-		AvaloniaProperty.Register<TextBlock, string?>(nameof(Text));
+		AvaloniaProperty.Register<FadeOutTextControl, string?>(nameof(Text));
 
 	private TextBlock? _trimmedTextBlock;
 	private FadeOutTextBlock? _noTrimTextBlock;
