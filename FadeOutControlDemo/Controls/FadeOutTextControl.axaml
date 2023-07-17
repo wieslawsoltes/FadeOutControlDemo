@@ -1,6 +1,6 @@
-<Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:c="clr-namespace:FadeOutControlDemo.Controls">
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="clr-namespace:FadeOutControlDemo.Controls">
 
   <Design.PreviewWith>
     <Panel Width="75" Background="DarkGray">
@@ -8,9 +8,11 @@
     </Panel>
   </Design.PreviewWith>
 
-  <Style Selector="c|FadeOutTextControl">
+  <ControlTheme x:Key="{x:Type c:FadeOutTextControl}" TargetType="c:FadeOutTextControl">
+
     <Setter Property="HorizontalAlignment" Value="Center" />
     <Setter Property="FontSize" Value="10" />
+
     <Setter Property="Template">
       <ControlTemplate>
         <Panel>
@@ -28,6 +30,7 @@
         </Panel>
       </ControlTemplate>
     </Setter>
-  </Style>
 
-</Styles>
+  </ControlTheme>
+
+</ResourceDictionary>

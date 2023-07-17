@@ -2,8 +2,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="FadeOutControlDemo.App"
              RequestedThemeVariant="Light">
+
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <MergeResourceInclude Source="avares://FadeOutControlDemo/Controls/FadeOutTextControl.axaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
+
   <Application.Styles>
     <FluentTheme />
-    <StyleInclude Source="/Controls/FadeOutTextControl.axaml"></StyleInclude>
   </Application.Styles>
+
 </Application>
