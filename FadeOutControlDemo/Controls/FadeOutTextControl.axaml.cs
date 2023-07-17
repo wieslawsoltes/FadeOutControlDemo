@@ -2,7 +2,6 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Metadata;
 using Avalonia.Controls.Primitives;
-using Avalonia.Media;
 
 namespace FadeOutControlDemo.Controls;
 
@@ -31,45 +30,7 @@ public class FadeOutTextControl : TemplatedControl
 
 		if (_trimmedTextBlock is not null && _noTrimTextBlock is not null)
 		{
-			_noTrimTextBlock._trimmedTextBlock = _trimmedTextBlock;
-		}
-	}
-}
-
-public class FadeOutTextBlock : TextBlock
-{
-	private static readonly IBrush FadeoutOpacityMask = new LinearGradientBrush
-	{
-		StartPoint = new RelativePoint(0, 0, RelativeUnit.Relative),
-		EndPoint = new RelativePoint(1, 0, RelativeUnit.Relative),
-		GradientStops =
-		{
-			new GradientStop { Color = Colors.White, Offset = 0 },
-			new GradientStop { Color = Colors.White, Offset = 0.7 },
-			new GradientStop { Color = Colors.Transparent, Offset = 0.9 }
-		}
-	}.ToImmutable();
-
-	internal TextBlock? _trimmedTextBlock;
-
-	protected override void RenderTextLayout(DrawingContext context, Point origin)
-	{
-		if (_trimmedTextBlock is not null)
-		{
-			var cutOff = _trimmedTextBlock.TextLayout.TextLines[0].HasCollapsed;
-			if (cutOff)
-			{
-				using var b = context.PushOpacityMask(FadeoutOpacityMask, Bounds);
-				TextLayout.Draw(context, origin + new Point(TextLayout.OverhangLeading, 0));
-			}
-			else
-			{
-				TextLayout.Draw(context, origin + new Point(TextLayout.OverhangLeading, 0));
-			}
-		}
-		else
-		{
-			base.RenderTextLayout(context, origin);
+			_noTrimTextBlock.TrimmedTextBlock = _trimmedTextBlock;
 		}
 	}
 }
